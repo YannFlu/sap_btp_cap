@@ -1,0 +1,13 @@
+{
+  "name": "incidents",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Incidents Fiori Elements App",
+  "scripts": {
+    "start": "npx fiori run --open \"index.html\"",
+    "build": "echo 'no build needed - uses HTML5 apps repo'"
+  },
+  "devDependencies": {
+    "@sap/ux-ui5-tooling": "^1"
+  }
+}
