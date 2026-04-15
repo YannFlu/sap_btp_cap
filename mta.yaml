@@ -69,9 +69,9 @@ modules:
     build-parameters:
       builder: custom
       commands:
-        - rm -rf dist
-        - mkdir dist
-        - zip -r dist/incidents-ui.zip . -x "dist/*"
+        - npx --yes rimraf dist
+        - node -e "require('fs').mkdirSync('dist',{recursive:true})"
+        - npx --yes bestzip dist/incidents-ui.zip Component.js manifest.json xs-app.json index.html i18n
       build-result: dist
       supported-platforms: []
 

@@ -8,10 +8,13 @@
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
-    "@sap/cds-dk": "^9"
+    "@sap/cds-dk": "^9",
+    "bestzip": "^2.2.1",
+    "rimraf": "^5.0.5"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "build:ui": "rimraf app/incidents/webapp/dist && node -e \"require('fs').mkdirSync('app/incidents/webapp/dist',{recursive:true})\" && cd app/incidents/webapp && bestzip dist/incidents-ui.zip Component.js manifest.json xs-app.json index.html i18n"
   },
   "private": true,
   "cds": {
