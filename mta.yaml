@@ -100,7 +100,7 @@ resources:
       service-plan: application
       path: ./xs-security.json
       config:
-        xsappname: sap_btp_cap-${org}-${space}
+        xsappname: sap_btp_cap-${space}
         tenant-mode: dedicated
         oauth2-configuration:
           credential-types:
