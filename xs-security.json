@@ -1,0 +1,46 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.support",
+      "description": "Support personell handling incidents"
+    },
+    {
+      "name": "$XSAPPNAME.admin",
+      "description": "Administrators managing customers and incidents"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Support",
+      "description": "Support personell",
+      "scope-references": [
+        "$XSAPPNAME.support"
+      ]
+    },
+    {
+      "name": "Admin",
+      "description": "Administrators",
+      "scope-references": [
+        "$XSAPPNAME.support",
+        "$XSAPPNAME.admin"
+      ]
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "IncidentsSupport",
+      "description": "Incident Management Support User",
+      "role-template-references": [
+        "$XSAPPNAME.Support"
+      ]
+    },
+    {
+      "name": "IncidentsAdmin",
+      "description": "Incident Management Admin User",
+      "role-template-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    }
+  ]
+}
